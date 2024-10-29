@@ -61,7 +61,7 @@ body {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    padding-inline: 25px;
+    padding: 25px;
 }
 
 .left,

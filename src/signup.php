@@ -48,63 +48,59 @@
                             <input type="email" name="email" id="email" placeholder="Example: AlecHardy@gmail.com" required>
                         </div>
 
-                        <form action="" method="post">
-                            <form action="" method="post">
-                                <!-- College Dropdown -->
-                                <div class="field input custom-dropdown">
-                                    <label for="college">College</label>
-                                    <div class="dropdown-header" id="college-header">
-                                        <span class="select-text">COLLEGE</span>
-                                    </div>
-                                    <div class="dropdown-list">
-                                        <div class="dropdown-item" data-value="CCSICT">CCSICT</div>
-                                        <div class="dropdown-item" data-value="CIT">CIT</div>
-                                        <div class="dropdown-item" data-value="CE">CE</div>
-                                    </div>
-                                    <input type="hidden" name="college" id="college" required>
-                                </div>
+                        <!-- College Dropdown -->
+                        <div class="field input custom-dropdown">
+                            <label for="college">College</label>
+                            <div class="dropdown-header" id="college-header">
+                                <span class="select-text">COLLEGE</span>
+                            </div>
+                            <div class="dropdown-list">
+                                <div class="dropdown-item" data-value="CCSICT">CCSICT</div>
+                                <div class="dropdown-item" data-value="CIT">CIT</div>
+                                <div class="dropdown-item" data-value="CE">CE</div>
+                            </div>
+                            <input type="hidden" name="college" id="college" required>
+                        </div>
 
-                                <!-- Program Dropdown -->
-                                <div class="field input custom-dropdown">
-                                    <label for="program">Program</label>
-                                    <div class="dropdown-header" id="program-header">
-                                        <span class="select-text">PROGRAM</span>
-                                    </div>
-                                    <div class="dropdown-list">
-                                        <div class="dropdown-item" data-value="Computer Science">Computer Science</div>
-                                        <div class="dropdown-item" data-value="Information Technology">Information Technology</div>
-                                        <div class="dropdown-item" data-value="Entertainment and Multimedia Computing">Entertainment and Multimedia Computing</div>
-                                    </div>
-                                    <input type="hidden" name="program" id="program" required>
-                                </div>
+                        <!-- Program Dropdown -->
+                        <div class="field input custom-dropdown">
+                            <label for="program">Program</label>
+                            <div class="dropdown-header" id="program-header">
+                                <span class="select-text">PROGRAM</span>
+                            </div>
+                            <div class="dropdown-list">
+                                <div class="dropdown-item" data-value="Computer Science">Computer Science</div>
+                                <div class="dropdown-item" data-value="Information Technology">Information Technology</div>
+                                <div class="dropdown-item" data-value="Entertainment and Multimedia Computing">Entertainment and Multimedia Computing</div>
+                            </div>
+                            <input type="hidden" name="program" id="program" required>
+                        </div>
 
-                                <!-- Section Dropdown -->
-                                <div class="field input custom-dropdown">
-                                    <label for="section">Section</label>
-                                    <div class="dropdown-header" id="section-header">
-                                        <span class="select-text">SECTION</span>
-                                    </div>
-                                    <div class="dropdown-list" id="section-dropdown-list">
-                                        <div class="dropdown-item" data-value="Business Analytics">Business Analytics</div>
-                                        <div class="dropdown-item" data-value="Business Processing Outsourcing">Business Processing Outsourcing</div>
-                                        <div class="dropdown-item" data-value="Data Mining">Data Mining</div>
-                                        <div class="dropdown-item" data-value="Digital Animation">Digital Animation</div>
-                                        <div class="dropdown-item" data-value="Game Development">Game Development</div>
-                                        <div class="dropdown-item" data-value="Network Security">Network Security</div>
-                                        <div class="dropdown-item" data-value="Web and Mobile Application Development">Web and Mobile Application Development</div>
-                                    </div>
-                                    <input type="hidden" name="section" id="section" required>
-                                </div>
+                        <!-- Section Dropdown -->
+                        <div class="field input custom-dropdown">
+                            <label for="section">Section</label>
+                            <div class="dropdown-header" id="section-header">
+                                <span class="select-text">SECTION</span>
+                            </div>
+                            <div class="dropdown-list" id="section-dropdown-list">
+                                <div class="dropdown-item" data-value="Business Analytics">Business Analytics</div>
+                                <div class="dropdown-item" data-value="Business Processing Outsourcing">Business Processing Outsourcing</div>
+                                <div class="dropdown-item" data-value="Data Mining">Data Mining</div>
+                                <div class="dropdown-item" data-value="Digital Animation">Digital Animation</div>
+                                <div class="dropdown-item" data-value="Game Development">Game Development</div>
+                                <div class="dropdown-item" data-value="Network Security">Network Security</div>
+                                <div class="dropdown-item" data-value="Web and Mobile Application Development">Web and Mobile Application Development</div>
+                            </div>
+                            <input type="hidden" name="section" id="section" required>
+                        </div>
 
-                                <div class="field">
-                                    <button type="submit" class="btn" name="submit" value="Register" required>Register</button>
-                                </div>
-                                <div class="links">
-                                    Already have an account? <a href="login.php">Login here</a>
-                                </div>
-                            </form>
-
-                        </form>
+                        <div class="field">
+                            <button type="submit" class="btn" name="submit" value="Register" required>Register</button>
+                        </div>
+                        <div class="links">
+                            Already have an account? <a href="login.php">Login here</a>
+                        </div>
+                    </form>
                 </div>
             </div>
 

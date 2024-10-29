@@ -34,8 +34,6 @@ document.addEventListener('click', function (event) {
 });
 
 const sectionDropdownList = document.getElementById('section-dropdown-list');
-sectionDropdownList.style.maxHeight = '150px';
-sectionDropdownList.style.overflowY = 'auto';
 
 const loginLink = document.querySelector('.links a');
 
