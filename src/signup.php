@@ -48,7 +48,6 @@
                             <input type="email" name="email" id="email" placeholder="Example: AlecHardy@gmail.com" required>
                         </div>
 
-                        <!-- College Dropdown -->
                         <div class="field input custom-dropdown">
                             <label for="college">College</label>
                             <div class="dropdown-header" id="college-header">
@@ -62,7 +61,6 @@
                             <input type="hidden" name="college" id="college" required>
                         </div>
 
-                        <!-- Program Dropdown -->
                         <div class="field input custom-dropdown">
                             <label for="program">Program</label>
                             <div class="dropdown-header" id="program-header">
@@ -76,7 +74,6 @@
                             <input type="hidden" name="program" id="program" required>
                         </div>
 
-                        <!-- Section Dropdown -->
                         <div class="field input custom-dropdown">
                             <label for="section">Section</label>
                             <div class="dropdown-header" id="section-header">
@@ -98,7 +95,7 @@
                             <button type="submit" class="btn" name="submit" value="Register" required>Register</button>
                         </div>
                         <div class="links">
-                            Already have an account? <a href="login.php">Login here</a>
+                            Already have an account? <a href="login.php" class="login-link">Login here</a>
                         </div>
                     </form>
                 </div>

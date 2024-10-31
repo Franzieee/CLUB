@@ -49,10 +49,6 @@ body {
     transition: box-shadow 0.7s ease;
 }
 
-.no-shadow {
-    box-shadow: none;
-}
-
 .box {
     height: 100%;
     display: flex;
@@ -93,11 +89,11 @@ body {
     padding: 20px;
 }
 
-header{
+header {
     font-size: 40px;
 }
 
-.inner header{
+.inner header {
     margin: 20px;
     margin-bottom: 0px;
 }
@@ -209,12 +205,12 @@ input::placeholder {
     margin: 30px;
 }
 
-@media (max-width: 1024px){
-    .left h1{
+@media (max-width: 1024px) {
+    .left h1 {
         font-size: 34px;
     }
 
-    .left p{
+    .left p {
         font-size: 19px;
         transform: translateY(-80%);
     }
@@ -224,48 +220,50 @@ input::placeholder {
         margin-bottom: 0px;
     }
 
-    .inner i{
+    .inner i {
         font-size: 20px;
         margin-top: 20px;
         margin: 20px;
     }
 }
 
-@media (max-width: 846px){
-    .links{
+@media (max-width: 846px) {
+    .links {
         font-size: 13px;
     }
 }
 
-@media (max-width: 768px){
-    .left h1{
+@media (max-width: 768px) {
+    .left h1 {
         font-size: 24px;
     }
 
-    .left p{
+    .left p {
         font-size: 17px;
         transform: translateY(-50%);
     }
 
-    .left h3{
+    .left h3 {
         font-size: 15px;
     }
 
-    .inner i{
+    .inner i {
         font-size: 18px;
         margin: 20px;
-    };
+    }
 
-    .left-after{
+    ;
+
+    .left-after {
         transform: translate(100%, 0%) !important;
     }
 
-    .right-after{
+    .right-after {
         transform: translate(-100%, 0%) !important;
     }
 }
 
-@media (max-width: 426px){
+@media (max-width: 426px) {
     .box-container {
         height: 600px;
         flex-direction: column;
@@ -329,7 +327,7 @@ input::placeholder {
         text-align: left;
         font-size: 13px;
     }
-    
+
     .right input {
         height: 25px;
         border-radius: 25px;
@@ -357,8 +355,8 @@ input::placeholder {
         box-shadow: 0 0 8px 2px var(--c-light);
         background: var(--c-mid);
     }
-    
-    .right .btn{
+
+    .right .btn {
         font-size: 14px;
         padding-top: 0px;
     }
@@ -370,7 +368,7 @@ input::placeholder {
     .left h1,
     .left p,
     .left h3,
-    .inner i{
+    .inner i {
         margin: 0px;
     }
 
@@ -390,69 +388,69 @@ input::placeholder {
         transform: translateY(220%);
     }
 
-    .inner i{
+    .inner i {
         font-size: 20px;
         transform: translateY(275%);
         margin: 18px;
     }
 
     .left-after,
-    .right-after{
+    .right-after {
         transform: none;
         transition: none;
     }
 }
 
-@media (max-width: 376px){
-    .left h1{
+@media (max-width: 376px) {
+    .left h1 {
         font-size: 18px;
     }
 
-    .inner i{
+    .inner i {
         font-size: 15px;
         margin: 17px;
     }
 
-    .links{
+    .links {
         font-size: 10px;
     }
 }
 
-@media (max-width: 321px){
-    .right .inner form{
+@media (max-width: 321px) {
+    .right .inner form {
         margin-top: 8px;
     }
 
-    .right label{
+    .right label {
         font-size: 13px;
     }
 
-    .right button{
+    .right button {
         margin-top: 13px;
     }
 
-    .right .btn{
+    .right .btn {
         padding-top: 5px;
         font-size: 10px;
     }
 
-    .links{
+    .links {
         font-size: 9px;
     }
 
-    .left h1{
+    .left h1 {
         font-size: 16px;
     }
 
-    .left p{
+    .left p {
         font-size: 13px;
     }
 
-    .left h3{
+    .left h3 {
         font-size: 12px;
     }
 
-    .inner i{
+    .inner i {
         margin: 10px;
     }
 }
@@ -475,4 +473,18 @@ input::placeholder {
     border-bottom-left-radius: 25px;
     border-left: 2px solid #b6eff1;
     border-right: none;
+}
+
+.no-shadow {
+    box-shadow: none;
+}
+
+.fade-out{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.fade-in{
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
