@@ -35,43 +35,33 @@ document.addEventListener('click', function (event) {
 
 const sectionDropdownList = document.getElementById('section-dropdown-list');
 
-window.addEventListener('DOMContentLoaded', () => {
-    const leftInner = document.querySelector('.left .inner');
-    const rightInner = document.querySelector('.right .inner');
-    const boxShadow = document.querySelector('.box-container');
+document.querySelectorAll('.links a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
 
-    leftInner.classList.add('fade-in');
-    rightInner.classList.add('fade-in');
-    boxShadow.classList.add('yes-shadow');
+        // Add left and right transition classes to the respective boxes
+        document.querySelector('.box-container').classList.remove('yes-shadow');
+        document.querySelector('.box-container').classList.add('no-shadow');
+        document.querySelector('.box.left').classList.add('left-after');
+        document.querySelector('.box.right').classList.add('right-after');
+
+        // Apply fade-out animation to .inner contents within each box simultaneously
+        document.querySelectorAll('.box .inner').forEach(inner => {
+            inner.classList.add('fade-out');
+        });
+
+        // Set timeout to match the animation duration, then redirect to the new page
+        setTimeout(() => {
+            window.location.href = link.href;
+        }, 700); // Adjust if necessary to sync with the full animation duration
+    });
 });
 
-function handleTransition(link) {
-    const leftInner = document.querySelector('.left .inner');
-    const rightInner = document.querySelector('.right .inner');
+window.addEventListener('load', function () {
     const boxShadow = document.querySelector('.box-container');
-    const leftSide = document.querySelector('.left');
-    const rightSide = document.querySelector('.right');
 
-    // Start fade-out for inner contents and box shadow
-    leftInner.classList.add('fade-out');
-    rightInner.classList.add('fade-out');
-    boxShadow.classList.remove('yes-shadow'); // Start the transition
-    boxShadow.classList.add('no-shadow');     // Fades to no-shadow
-
-    // Trigger movement animations for the sides
-    leftSide.classList.add('left-after');
-    rightSide.classList.add('right-after');
-}
-
-const links = document.querySelectorAll('.links a');
-
-links.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        handleTransition(link);
-
-        setTimeout(() => {
-            window.location.href = link.getAttribute('href');
-        }, 600);
+    document.querySelectorAll('.box .inner').forEach(inner => {
+        inner.classList.add('fade-in');
     });
+    boxShadow.classList.add('yes-shadow');
 });

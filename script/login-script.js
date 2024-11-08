@@ -1,42 +1,29 @@
-window.addEventListener('DOMContentLoaded', () => {
-    document.body.style.opacity = '1';
 
-    const leftInner = document.querySelector('.left .inner');
-    const rightInner = document.querySelector('.right .inner');
-    const boxShadow = document.querySelector('.box-container');
-
-    leftInner.classList.add('fade-in');
-    rightInner.classList.add('fade-in');
-    boxShadow.classList.add('yes-shadow');
-});
-
-function handleTransition(link) {
-    const leftInner = document.querySelector('.left .inner');
-    const rightInner = document.querySelector('.right .inner');
-    const boxShadow = document.querySelector('.box-container');
-    const leftSide = document.querySelector('.left');
-    const rightSide = document.querySelector('.right');
-
-    // Start fade-out for inner contents and box shadow
-    leftInner.classList.add('fade-out');
-    rightInner.classList.add('fade-out');
-    boxShadow.classList.remove('yes-shadow'); // Start the transition
-    boxShadow.classList.add('no-shadow');     // Fades to no-shadow
-
-    // Trigger movement animations for the sides
-    leftSide.classList.add('left-after');
-    rightSide.classList.add('right-after');
-}
-
-const links = document.querySelectorAll('.links a');
-
-links.forEach(link => {
-    link.addEventListener('click', (e) => {
+//*box fade-out + box transition
+document.querySelectorAll('.links a').forEach(link => {
+    link.addEventListener('click', function (e) {
         e.preventDefault();
-        handleTransition(link);
+
+        document.querySelector('.box-container').classList.remove('yes-shadow');
+        document.querySelector('.box-container').classList.add('no-shadow');
+        document.querySelector('.box.left').classList.add('left-after');
+        document.querySelector('.box.right').classList.add('right-after');
+        
+        document.querySelectorAll('.box .inner').forEach(inner => {
+            inner.classList.add('fade-out');
+        });
 
         setTimeout(() => {
-            window.location.href = link.getAttribute('href');
-        }, 600);
+            window.location.href = link.href;
+        }, 700);
     });
+});
+
+window.addEventListener('load', function () {
+    const boxShadow = document.querySelector('.box-container');
+
+    document.querySelectorAll('.box .inner').forEach(inner => {
+        inner.classList.add('fade-in');
+    });
+    boxShadow.classList.add('yes-shadow');
 });
